@@ -1,0 +1,45 @@
+package nilaimahasiswa.util;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+/**
+ * Singleton koneksi ke MySQL via JDBC.
+ * Semua DAO mengambil Connection lewat kelas ini.
+ *
+ * @author Yabes / Xyra77
+ */
+public class DatabaseConnection {
+
+    private static final String URL      = "jdbc:mysql://localhost:3306/db_nilai_mahasiswa?useSSL=false&serverTimezone=Asia/Makassar&allowPublicKeyRetrieval=true";
+    private static final String USERNAME = "root";
+    private static final String PASSWORD = "";
+
+    private static Connection instance = null;
+
+    /** Mencegah instansiasi dari luar. */
+    private DatabaseConnection() {}
+
+    /**
+     * Kembalikan koneksi tunggal (singleton).
+     * Otomatis buka kembali jika koneksi terputus.
+     */
+    public static Connection getConnection() throws SQLException {
+        if (instance == null || instance.isClosed()) {
+            instance = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+        }
+        return instance;
+    }
+
+    /** Tutup koneksi (panggil saat aplikasi ditutup, opsional). */
+    public static void close() {
+        if (instance != null) {
+            try {
+                instance.close();
+            } catch (SQLException e) {
+                System.err.println("Gagal menutup koneksi: " + e.getMessage());
+            }
+        }
+    }
+}
