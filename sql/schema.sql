@@ -67,8 +67,8 @@ INSERT INTO mahasiswa (nim, nama, prodi, angkatan) VALUES
     ('1915091055', 'Yehuda Bezaleel Widiapratama',  'Sistem Informasi', '2019');
 
 INSERT INTO dosen (nidn, nama, keahlian, no_hp) VALUES
-    ('0012345601', 'I Ketut Purnamawan, S.Kom., M.Kom.', 'Basis Data',                  '081234567890'),
-    ('0023456702', 'Ni Luh Putu Ardini, M.T.',           'Rekayasa Perangkat Lunak',    '081298765432');
+    ('0012345601', 'I Ketut Purnamawan, S.Kom., M.Kom.', 'Basis Data',                  '081234567888'),
+    ('0023456702', 'Ni Luh Putu Ardini, M.T.',           'Rekayasa Perangkat Lunak',    '081298765488');
 
 INSERT INTO mata_kuliah (kode, nama, sks, semester) VALUES
     ('IF101', 'Pemrograman Java',          3, 1),

@@ -39,6 +39,7 @@ public class Dashboard extends JFrame {
         this.user = user;
         initComponents();
         postInit();
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         setLocationRelativeTo(null);
     }
 
@@ -59,9 +60,7 @@ public class Dashboard extends JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Dashboard - Sistem Nilai Mahasiswa");
         setMinimumSize(new java.awt.Dimension(900, 560));
-        setPreferredSize(new java.awt.Dimension(1080, 650));
 
-        // --- Sidebar ---
         pnlSidebar.setBackground(new java.awt.Color(22, 47, 79));
         pnlSidebar.setPreferredSize(new java.awt.Dimension(200, 650));
 
@@ -73,7 +72,6 @@ public class Dashboard extends JFrame {
         btnBeranda.setForeground(new java.awt.Color(255, 255, 255));
         btnBeranda.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnBeranda.setText("  Beranda");
-        btnBeranda.setBorder(null);
         btnBeranda.setFocusPainted(false);
         btnBeranda.setOpaque(true);
         btnBeranda.addActionListener(new java.awt.event.ActionListener() {
@@ -86,7 +84,6 @@ public class Dashboard extends JFrame {
         btnMahasiswa.setForeground(new java.awt.Color(200, 208, 224));
         btnMahasiswa.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnMahasiswa.setText("  Data Mahasiswa");
-        btnMahasiswa.setBorder(null);
         btnMahasiswa.setFocusPainted(false);
         btnMahasiswa.setOpaque(true);
         btnMahasiswa.addActionListener(new java.awt.event.ActionListener() {
@@ -99,7 +96,6 @@ public class Dashboard extends JFrame {
         btnMataKuliah.setForeground(new java.awt.Color(200, 208, 224));
         btnMataKuliah.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnMataKuliah.setText("  Mata Kuliah");
-        btnMataKuliah.setBorder(null);
         btnMataKuliah.setFocusPainted(false);
         btnMataKuliah.setOpaque(true);
         btnMataKuliah.addActionListener(new java.awt.event.ActionListener() {
@@ -112,7 +108,6 @@ public class Dashboard extends JFrame {
         btnNilai.setForeground(new java.awt.Color(200, 208, 224));
         btnNilai.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnNilai.setText("  Input Nilai");
-        btnNilai.setBorder(null);
         btnNilai.setFocusPainted(false);
         btnNilai.setOpaque(true);
         btnNilai.addActionListener(new java.awt.event.ActionListener() {
@@ -125,7 +120,6 @@ public class Dashboard extends JFrame {
         btnDosen.setForeground(new java.awt.Color(200, 208, 224));
         btnDosen.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnDosen.setText("  Data Dosen");
-        btnDosen.setBorder(null);
         btnDosen.setFocusPainted(false);
         btnDosen.setOpaque(true);
         btnDosen.addActionListener(new java.awt.event.ActionListener() {
@@ -138,7 +132,6 @@ public class Dashboard extends JFrame {
         btnLogout.setForeground(new java.awt.Color(255, 255, 255));
         btnLogout.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnLogout.setText("  Keluar");
-        btnLogout.setBorder(null);
         btnLogout.setFocusPainted(false);
         btnLogout.setOpaque(true);
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -154,26 +147,33 @@ public class Dashboard extends JFrame {
         pnlSidebar.setLayout(pnlSidebarLayout);
         pnlSidebarLayout.setHorizontalGroup(
             pnlSidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblLogo, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-            .addComponent(btnBeranda, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-            .addComponent(btnMahasiswa, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-            .addComponent(btnMataKuliah, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-            .addComponent(btnNilai, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-            .addComponent(btnDosen, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-            .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-            .addComponent(lblSideFooter, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+            .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, Short.MAX_VALUE)
+            .addComponent(btnBeranda, javax.swing.GroupLayout.PREFERRED_SIZE, 200, Short.MAX_VALUE)
+            .addComponent(btnMahasiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 200, Short.MAX_VALUE)
+            .addComponent(btnMataKuliah, javax.swing.GroupLayout.PREFERRED_SIZE, 200, Short.MAX_VALUE)
+            .addComponent(btnNilai, javax.swing.GroupLayout.PREFERRED_SIZE, 200, Short.MAX_VALUE)
+            .addComponent(btnDosen, javax.swing.GroupLayout.PREFERRED_SIZE, 200, Short.MAX_VALUE)
+            .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 200, Short.MAX_VALUE)
+            .addComponent(lblSideFooter, javax.swing.GroupLayout.PREFERRED_SIZE, 200, Short.MAX_VALUE)
         );
         pnlSidebarLayout.setVerticalGroup(
-            pnlSidebarLayout.createSequentialGroup()
-            .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(btnBeranda, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(btnMahasiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(btnMataKuliah, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(btnNilai, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(btnDosen, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(lblSideFooter, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+            pnlSidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlSidebarLayout.createSequentialGroup()
+                .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(btnBeranda, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(btnMahasiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(btnMataKuliah, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(btnNilai, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(btnDosen, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(lblSideFooter, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pnlContent.setBackground(new java.awt.Color(244, 246, 250));
@@ -196,12 +196,12 @@ public class Dashboard extends JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(pnlSidebar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(pnlContent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnlContent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlSidebar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(pnlContent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlSidebar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlContent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -251,32 +251,32 @@ public class Dashboard extends JFrame {
         active.setForeground(Color.WHITE);
     }
 
-    private void btnBerandaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBerandaActionPerformed
+    private void btnBerandaActionPerformed(java.awt.event.ActionEvent evt) {                                           
         cardLayout.show(pnlContent, "beranda");
         setActiveBtn(btnBeranda);
     }
 
-    private void btnMahasiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMahasiswaActionPerformed
+    private void btnMahasiswaActionPerformed(java.awt.event.ActionEvent evt) {                                             
         cardLayout.show(pnlContent, "mahasiswa");
         setActiveBtn(btnMahasiswa);
     }
 
-    private void btnMataKuliahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMataKuliahActionPerformed
+    private void btnMataKuliahActionPerformed(java.awt.event.ActionEvent evt) {                                              
         cardLayout.show(pnlContent, "matakuliah");
         setActiveBtn(btnMataKuliah);
     }
 
-    private void btnNilaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNilaiActionPerformed
+    private void btnNilaiActionPerformed(java.awt.event.ActionEvent evt) {                                         
         cardLayout.show(pnlContent, "inputnilai");
         setActiveBtn(btnNilai);
     }
 
-    private void btnDosenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDosenActionPerformed
+    private void btnDosenActionPerformed(java.awt.event.ActionEvent evt) {                                         
         cardLayout.show(pnlContent, "dosen");
         setActiveBtn(btnDosen);
     }
 
-    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
+    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {                                          
         keluar();
     }
 

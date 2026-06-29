@@ -177,7 +177,6 @@ public class panelInputNilai extends JPanel {
                     .addComponent(txtTahunAjaran, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
         );
 
-        jScrollPane1.setPreferredSize(new Dimension(0, 260));
 
         GroupLayout gl = new GroupLayout(this);
         this.setLayout(gl);

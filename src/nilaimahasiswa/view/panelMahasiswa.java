@@ -1,7 +1,6 @@
 package nilaimahasiswa.view;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.util.ArrayList;
 import javax.swing.BorderFactory;
 import javax.swing.GroupLayout;
@@ -19,6 +18,7 @@ import nilaimahasiswa.model.Student;
 
 /**
  * Panel pengelolaan data Mahasiswa.
+ *
  * @author Yabes
  */
 public class panelMahasiswa extends JPanel {
@@ -66,29 +66,32 @@ public class panelMahasiswa extends JPanel {
         setBackground(new java.awt.Color(244, 246, 250));
         setBorder(javax.swing.BorderFactory.createEmptyBorder(20, 24, 20, 24));
 
-        lblJudul     = new JLabel();
-        lblNim       = new JLabel();
-        lblNama      = new JLabel();
-        lblProdi     = new JLabel();
-        lblAngkatan  = new JLabel();
-        lblHalaman   = new JLabel();
+        lblJudul = new JLabel();
+        lblNim = new JLabel();
+        lblNama = new JLabel();
+        lblProdi = new JLabel();
+        lblAngkatan = new JLabel();
+        lblHalaman = new JLabel();
         pnlKartuForm = new JPanel();
-        txtNim       = new JTextField();
-        txtNama      = new JTextField();
-        txtProdi     = new JTextField();
-        txtAngkatan  = new JTextField();
-        txtCari      = new JTextField();
-        btnCari      = new JButton();
-        btnTambah    = new JButton();
-        btnUbah      = new JButton();
-        btnHapus     = new JButton();
+        txtNim = new JTextField();
+        txtNama = new JTextField();
+        txtProdi = new JTextField();
+        txtAngkatan = new JTextField();
+        txtCari = new JTextField();
+        btnCari = new JButton();
+        btnTambah = new JButton();
+        btnUbah = new JButton();
+        btnHapus = new JButton();
         btnBersihkan = new JButton();
-        btnPrev      = new JButton();
-        btnNext      = new JButton();
-        modelTabel   = new DefaultTableModel(new Object[]{"NIM","Nama","Program Studi","Angkatan"}, 0) {
-            @Override public boolean isCellEditable(int r, int c) { return false; }
+        btnPrev = new JButton();
+        btnNext = new JButton();
+        modelTabel = new DefaultTableModel(new Object[]{"NIM", "Nama", "Program Studi", "Angkatan"}, 0) {
+            @Override
+            public boolean isCellEditable(int r, int c) {
+                return false;
+            }
         };
-        tabel        = new JTable(modelTabel);
+        tabel = new JTable(modelTabel);
         jScrollPane1 = new JScrollPane(tabel);
 
         lblJudul.setText("Data Mahasiswa");
@@ -140,68 +143,66 @@ public class panelMahasiswa extends JPanel {
         pnlKartuForm.setLayout(kartuLayout);
         kartuLayout.setAutoCreateGaps(true);
         kartuLayout.setHorizontalGroup(
-            kartuLayout.createSequentialGroup()
-                .addGroup(kartuLayout.createParallelGroup().addComponent(lblNim).addComponent(txtNim, 130, 130, 180))
-                .addGroup(kartuLayout.createParallelGroup().addComponent(lblNama).addComponent(txtNama, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGroup(kartuLayout.createParallelGroup().addComponent(lblProdi).addComponent(txtProdi, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGroup(kartuLayout.createParallelGroup().addComponent(lblAngkatan).addComponent(txtAngkatan, 100, 100, 140))
+                kartuLayout.createSequentialGroup()
+                        .addGroup(kartuLayout.createParallelGroup().addComponent(lblNim).addComponent(txtNim, 130, 130, 180))
+                        .addGroup(kartuLayout.createParallelGroup().addComponent(lblNama).addComponent(txtNama, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(kartuLayout.createParallelGroup().addComponent(lblProdi).addComponent(txtProdi, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(kartuLayout.createParallelGroup().addComponent(lblAngkatan).addComponent(txtAngkatan, 100, 100, 140))
         );
         kartuLayout.setVerticalGroup(
-            kartuLayout.createSequentialGroup()
-                .addGroup(kartuLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNim).addComponent(lblNama).addComponent(lblProdi).addComponent(lblAngkatan))
-                .addGroup(kartuLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtNim, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNama, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtProdi, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtAngkatan, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                kartuLayout.createSequentialGroup()
+                        .addGroup(kartuLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                .addComponent(lblNim).addComponent(lblNama).addComponent(lblProdi).addComponent(lblAngkatan))
+                        .addGroup(kartuLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtNim, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtNama, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtProdi, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtAngkatan, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
         );
-
-        jScrollPane1.setPreferredSize(new Dimension(0, 260));
 
         // Main layout
         GroupLayout gl = new GroupLayout(this);
         this.setLayout(gl);
         gl.setAutoCreateGaps(true);
         gl.setHorizontalGroup(
-            gl.createParallelGroup(GroupLayout.Alignment.LEADING)
-                .addGroup(gl.createSequentialGroup()
-                    .addComponent(lblJudul)
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(txtCari, GroupLayout.PREFERRED_SIZE, 160, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCari))
-                .addComponent(pnlKartuForm, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(gl.createSequentialGroup()
-                    .addComponent(btnTambah)
-                    .addComponent(btnUbah)
-                    .addComponent(btnHapus)
-                    .addComponent(btnBersihkan)
-                    .addGap(0, 0, Short.MAX_VALUE))
-                .addComponent(jScrollPane1, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(gl.createSequentialGroup()
-                    .addComponent(btnPrev)
-                    .addGap(10, 10, 10)
-                    .addComponent(lblHalaman)
-                    .addGap(10, 10, 10)
-                    .addComponent(btnNext)
-                    .addGap(0, 0, Short.MAX_VALUE))
+                gl.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(gl.createSequentialGroup()
+                                .addComponent(lblJudul)
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(txtCari, GroupLayout.PREFERRED_SIZE, 160, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnCari))
+                        .addComponent(pnlKartuForm, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(gl.createSequentialGroup()
+                                .addComponent(btnTambah)
+                                .addComponent(btnUbah)
+                                .addComponent(btnHapus)
+                                .addComponent(btnBersihkan)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(gl.createSequentialGroup()
+                                .addComponent(btnPrev)
+                                .addGap(10, 10, 10)
+                                .addComponent(lblHalaman)
+                                .addGap(10, 10, 10)
+                                .addComponent(btnNext)
+                                .addGap(0, 0, Short.MAX_VALUE))
         );
         gl.setVerticalGroup(
-            gl.createSequentialGroup()
-                .addGroup(gl.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblJudul)
-                    .addComponent(txtCari, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCari))
-                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(pnlKartuForm, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(gl.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnTambah).addComponent(btnUbah).addComponent(btnHapus).addComponent(btnBersihkan))
-                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(gl.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnPrev).addComponent(lblHalaman).addComponent(btnNext))
+                gl.createSequentialGroup()
+                        .addGroup(gl.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                .addComponent(lblJudul)
+                                .addComponent(txtCari, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnCari))
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(pnlKartuForm, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(gl.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                .addComponent(btnTambah).addComponent(btnUbah).addComponent(btnHapus).addComponent(btnBersihkan))
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(gl.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                .addComponent(btnPrev).addComponent(lblHalaman).addComponent(btnNext))
         );
     }
     // </editor-fold>//GEN-END:initComponents
@@ -232,7 +233,10 @@ public class panelMahasiswa extends JPanel {
         lblProdi.setFont(UITheme.FONT_LABEL);
         lblAngkatan.setFont(UITheme.FONT_LABEL);
 
-        styleTxt(txtNim); styleTxt(txtNama); styleTxt(txtProdi); styleTxt(txtAngkatan);
+        styleTxt(txtNim);
+        styleTxt(txtNama);
+        styleTxt(txtProdi);
+        styleTxt(txtAngkatan);
         txtCari.setFont(UITheme.FONT_LABEL);
 
         UITheme.styleTable(tabel, 18, 32, 30, 14); // NIM, Nama, Program Studi, Angkatan
@@ -244,11 +248,17 @@ public class panelMahasiswa extends JPanel {
         btnHapus.addActionListener(evt -> hapus());
         btnBersihkan.addActionListener(evt -> bersihkanForm());
         btnPrev.addActionListener(evt -> {
-            if (halamanSaat > 0) { halamanSaat--; refreshTabel(); }
+            if (halamanSaat > 0) {
+                halamanSaat--;
+                refreshTabel();
+            }
         });
         btnNext.addActionListener(evt -> {
             int total = (int) Math.ceil((double) dataSekarang.size() / BARIS_PER_HALAMAN);
-            if (halamanSaat < total - 1) { halamanSaat++; refreshTabel(); }
+            if (halamanSaat < total - 1) {
+                halamanSaat++;
+                refreshTabel();
+            }
         });
     }
 
@@ -261,7 +271,9 @@ public class panelMahasiswa extends JPanel {
 
     private void isiFormDariBaris() {
         int row = tabel.getSelectedRow();
-        if (row < 0) return;
+        if (row < 0) {
+            return;
+        }
         txtNim.setText(modelTabel.getValueAt(row, 0).toString());
         txtNama.setText(modelTabel.getValueAt(row, 1).toString());
         txtProdi.setText(modelTabel.getValueAt(row, 2).toString());
@@ -274,7 +286,9 @@ public class panelMahasiswa extends JPanel {
             tampilkanData(controller.cari(null));
             bersihkanForm();
             info("Data mahasiswa berhasil ditambahkan.");
-        } catch (Exception ex) { error(ex.getMessage()); }
+        } catch (Exception ex) {
+            error(ex.getMessage());
+        }
     }
 
     private void ubah() {
@@ -282,23 +296,35 @@ public class panelMahasiswa extends JPanel {
             controller.update(txtNim.getText(), txtNama.getText(), txtProdi.getText(), txtAngkatan.getText());
             tampilkanData(controller.cari(null));
             info("Data mahasiswa berhasil diubah.");
-        } catch (Exception ex) { error(ex.getMessage()); }
+        } catch (Exception ex) {
+            error(ex.getMessage());
+        }
     }
 
     private void hapus() {
         try {
-            if (txtNim.getText().trim().isEmpty()) { error("Pilih data pada tabel terlebih dahulu!"); return; }
+            if (txtNim.getText().trim().isEmpty()) {
+                error("Pilih data pada tabel terlebih dahulu!");
+                return;
+            }
             if (JOptionPane.showConfirmDialog(this, "Hapus mahasiswa ini?", "Konfirmasi",
-                    JOptionPane.YES_NO_OPTION) != JOptionPane.YES_OPTION) return;
+                    JOptionPane.YES_NO_OPTION) != JOptionPane.YES_OPTION) {
+                return;
+            }
             controller.hapus(txtNim.getText());
             tampilkanData(controller.cari(null));
             bersihkanForm();
             info("Data mahasiswa berhasil dihapus.");
-        } catch (Exception ex) { error(ex.getMessage()); }
+        } catch (Exception ex) {
+            error(ex.getMessage());
+        }
     }
 
     private void bersihkanForm() {
-        txtNim.setText(""); txtNama.setText(""); txtProdi.setText(""); txtAngkatan.setText("");
+        txtNim.setText("");
+        txtNama.setText("");
+        txtProdi.setText("");
+        txtAngkatan.setText("");
         tabel.clearSelection();
     }
 
@@ -320,6 +346,11 @@ public class panelMahasiswa extends JPanel {
         lblHalaman.setText("Halaman " + (halamanSaat + 1) + " / " + Math.max(totalHalaman, 1));
     }
 
-    private void info(String p)  { JOptionPane.showMessageDialog(this, p, "Berhasil", JOptionPane.INFORMATION_MESSAGE); }
-    private void error(String p) { JOptionPane.showMessageDialog(this, p, "Gagal",    JOptionPane.ERROR_MESSAGE); }
+    private void info(String p) {
+        JOptionPane.showMessageDialog(this, p, "Berhasil", JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    private void error(String p) {
+        JOptionPane.showMessageDialog(this, p, "Gagal", JOptionPane.ERROR_MESSAGE);
+    }
 }

@@ -1,4 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  ============================================================
+  HAK CIPTA / COPYRIGHT NOTICE
+  ============================================================
+  Proyek ini adalah karya intelektual milik:
+    Nama   : Xyra77 / Xyra Company
+    GitHub : https://github.com/Xyra77
+    Tahun  : 2025
+
+  LARANGAN PENGGUNAAN AI:
+  Dilarang keras menggunakan teknologi kecerdasan buatan (AI)
+  dalam bentuk apapun (termasuk namun tidak terbatas pada
+  ChatGPT, Claude, Copilot, Gemini, dsb.) untuk menyalin,
+  mereproduksi, menganalisis, memodifikasi, atau mendistribusikan
+  ulang kode ini tanpa izin tertulis dari pemilik.
+
+  DASAR HUKUM YANG BERLAKU:
+  [NASIONAL]
+  - UU No. 28 Tahun 2014 tentang Hak Cipta
+  - UU No. 19 Tahun 2016 tentang Informasi dan Transaksi
+    Elektronik (ITE) jo. UU No. 11 Tahun 2008
+  - UU No. 30 Tahun 2000 tentang Rahasia Dagang
+  - PP No. 56 Tahun 2021 tentang Pengelolaan Royalti
+    Hak Cipta Lagu dan/atau Musik
+
+  [INTERNASIONAL]
+  - Berne Convention for the Protection of Literary
+    and Artistic Works (1886, rev. 1971)
+  - WIPO Copyright Treaty (WCT) 1996
+  - Agreement on Trade-Related Aspects of Intellectual
+    Property Rights (TRIPS Agreement) - WTO 1994
+  - Universal Copyright Convention (UCC)
+
+  Pelanggaran dapat dikenai sanksi pidana dan/atau perdata
+  sesuai ketentuan hukum yang berlaku.
+  All rights reserved. Unauthorized use is strictly prohibited.
+  ============================================================
+-->
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>

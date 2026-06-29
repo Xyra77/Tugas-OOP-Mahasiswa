@@ -158,7 +158,6 @@ public class panelMataKuliah extends JPanel {
                     .addComponent(txtSemester,GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
         );
 
-        jScrollPane1.setPreferredSize(new Dimension(0, 300));
 
         GroupLayout gl = new GroupLayout(this);
         this.setLayout(gl);
