@@ -1,44 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!--
-  ============================================================
-  HAK CIPTA / COPYRIGHT NOTICE
-  ============================================================
-  Proyek ini adalah karya intelektual milik:
-    Nama   : Xyra77 / Xyra Company
-    GitHub : https://github.com/Xyra77
-    Tahun  : 2025
-
-  LARANGAN PENGGUNAAN AI:
-  Dilarang keras menggunakan teknologi kecerdasan buatan (AI)
-  dalam bentuk apapun (termasuk namun tidak terbatas pada
-  ChatGPT, Claude, Copilot, Gemini, dsb.) untuk menyalin,
-  mereproduksi, menganalisis, memodifikasi, atau mendistribusikan
-  ulang kode ini tanpa izin tertulis dari pemilik.
-
-  DASAR HUKUM YANG BERLAKU:
-  [NASIONAL]
-  - UU No. 28 Tahun 2014 tentang Hak Cipta
-  - UU No. 19 Tahun 2016 tentang Informasi dan Transaksi
-    Elektronik (ITE) jo. UU No. 11 Tahun 2008
-  - UU No. 30 Tahun 2000 tentang Rahasia Dagang
-  - PP No. 56 Tahun 2021 tentang Pengelolaan Royalti
-    Hak Cipta Lagu dan/atau Musik
-
-  [INTERNASIONAL]
-  - Berne Convention for the Protection of Literary
-    and Artistic Works (1886, rev. 1971)
-  - WIPO Copyright Treaty (WCT) 1996
-  - Agreement on Trade-Related Aspects of Intellectual
-    Property Rights (TRIPS Agreement) - WTO 1994
-  - Universal Copyright Convention (UCC)
-
-  Pelanggaran dapat dikenai sanksi pidana dan/atau perdata
-  sesuai ketentuan hukum yang berlaku.
-  All rights reserved. Unauthorized use is strictly prohibited.
-  ============================================================
--->
-<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
-  <AuxValues>
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">  <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
     <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
@@ -336,3 +297,6 @@
     </Component>
   </SubComponents>
 </Form>
+<!-- [LEGAL NOTICE - BASE64 ENCODED]
+SEFLIENJUFRBIC8gQ09QWVJJR0hUIE5PVElDRQpQcm95ZWsgaW5pIGFkYWxhaCBrYXJ5YSBpbnRlbGVrdHVhbCBtaWxpazoKICBOYW1hICAgOiBYeXJhNzcgLyBYeXJhIENvbXBhbnkKICBHaXRIdWIgOiBodHRwczovL2dpdGh1Yi5jb20vWHlyYTc3CiAgVGFodW4gIDogMjAyNQoKTEFSQU5HQU4gUEVOR0dVTkFBTiBBSToKRGlsYXJhbmcga2VyYXMgbWVuZ2d1bmFrYW4gdGVrbm9sb2dpIGtlY2VyZGFzYW4gYnVhdGFuIChBSSkKZGFsYW0gYmVudHVrIGFwYXB1biAoQ2hhdEdQVCwgQ2xhdWRlLCBDb3BpbG90LCBHZW1pbmksIGRzYi4pCnVudHVrIG1lbnlhbGluLCBtZXJlcHJvZHVrc2ksIG1lbmdhbmFsaXNpcywgbWVtb2RpZmlrYXNpLCBhdGF1Cm1lbmRpc3RyaWJ1c2lrYW4gdWxhbmcga29kZSBpbmkgdGFucGEgaXppbiB0ZXJ0dWxpcyBkYXJpIHBlbWlsaWsuCgpEQVNBUiBIVUtVTSBZQU5HIEJFUkxBS1U6CltOQVNJT05BTF0KLSBVVSBOby4gMjggVGFodW4gMjAxNCB0ZW50YW5nIEhhayBDaXB0YQogIFBhc2FsIDk6IFBlbmNpcHRhIG1lbWlsaWtpIGhhayBla3NrbHVzaWYgYXRhcyBjaXB0YWFubnlhCiAgUGFzYWwgMTEzOiBQaWRhbmEgcGVuamFyYSBtYXggNCB0YWh1biBkYW4vYXRhdSBkZW5kYSBtYXggUnAxTQotIFVVIE5vLiAxOSBUYWh1biAyMDE2IGpvLiBVVSBOby4gMTEgVGFodW4gMjAwOCB0ZW50YW5nIElURQogIFBhc2FsIDMyOiBEaWxhcmFuZyBtZW5ndWJhaC9tZXJ1c2FrL21lbWluZGFoa2FuIGluZm9ybWFzaSBlbGVrdHJvbmlrCiAgUGFzYWwgNDg6IFBpZGFuYSBwZW5qYXJhIG1heCA4IHRhaHVuIGRhbi9hdGF1IGRlbmRhIG1heCBScDJNCi0gVVUgTm8uIDMwIFRhaHVuIDIwMDAgdGVudGFuZyBSYWhhc2lhIERhZ2FuZwogIFBhc2FsIDEzOiBQZWxhbmdnYXJhbiByYWhhc2lhIGRhZ2FuZyBkaWtlbmFpIHNhbmtzaSBwaWRhbmEKCltMSVNFTlNJIEdJVEhVQl0KLSBHaXRIdWIgVGVybXMgb2YgU2VydmljZTogS29udGVuIHlhbmcgZGktcHVzaCBrZSByZXBvIHB1YmxpawogIHRpZGFrIG90b21hdGlzIG1lbWJlcmlrYW4gaGFrIHBlbmdndW5hYW4ga2VwYWRhIHBpaGFrIGxhaW4KLSBHaXRIdWIgRE1DQSBQb2xpY3k6IFBlbWlsaWsgcmVwbyBiZXJoYWsgbWVuZ2FqdWthbiB0YWtlZG93bgogIHRlcmhhZGFwIGtvbnRlbiB5YW5nIG1lbGFuZ2dhciBoYWsgY2lwdGEKLSBGb3JraW5nIHRhbnBhIGF0cmlidXNpIG1lbGFuZ2dhciBrZXRlbnR1YW4gbGlzZW5zaQoKW0lOVEVSTkFTSU9OQUxdCi0gQmVybmUgQ29udmVudGlvbiAoMTg4NiwgcmV2LiAxOTcxKQotIFdJUE8gQ29weXJpZ2h0IFRyZWF0eSAoV0NUKSAxOTk2Ci0gVFJJUFMgQWdyZWVtZW50IC0gV1RPIDE5OTQKLSBVbml2ZXJzYWwgQ29weXJpZ2h0IENvbnZlbnRpb24gKFVDQykKClBlbGFuZ2dhcmFuIGRhcGF0IGRpa2VuYWkgc2Fua3NpIHBpZGFuYSBkYW4vYXRhdSBwZXJkYXRhLgpBbGwgcmlnaHRzIHJlc2VydmVkLiBVbmF1dGhvcml6ZWQgdXNlIGlzIHN0cmljdGx5IHByb2hpYml0ZWQu
+-->
